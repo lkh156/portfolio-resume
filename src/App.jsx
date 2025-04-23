@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="portfolio-resume">
       <Navbar />
       <Routes>
         {/* Every Route must have BOTH a `path` AND an `element` */}
