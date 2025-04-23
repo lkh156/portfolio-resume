@@ -10,13 +10,13 @@ import projects from '../data/projects';
 import LinkedInPhoto from '../assets/profile/linkedin-photo.jpg';
 
 // Tech stack icons
-import IconReact from '../assets/icons/react.svg';
-import IconPython from '../assets/icons/python.svg';
-import IconAWS from '../assets/icons/aws.svg';
-import IconAzure from '../assets/icons/azure.svg';
-import IconTerraform from '../assets/icons/terraform.svg';
+import IconReact from '../assets/icons/react.png';
+import IconPython from '../assets/icons/python.png';
+import IconAWS from '../assets/icons/aws.png';
+import IconAzure from '../assets/icons/Azure.png';
+import IconTerraform from '../assets/icons/Terraform.png';
 import IconLangChain from '../assets/icons/langchain.jpg';
-import IconGitHub from '../assets/icons/github.svg';
+import IconGitHub from '../assets/icons/Github.png';
 
 
 export default function Home() {
