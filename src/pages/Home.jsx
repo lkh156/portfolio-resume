@@ -7,16 +7,18 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import projects from '../data/projects';
 
 // Profile photo
-import LinkedInPhoto from '../assets/profile/LinkedIn-Photo.jpg';
+import LinkedInPhoto from '../assets/Profile/LinkedIn-Photo.jpg';
 
 // Tech stack icons
-import IconReact from '../assets/icons/React.png';
-import IconPython from '../assets/icons/Python.png';
-import IconAWS from '../assets/icons/AWS.png';
-import IconAzure from '../assets/icons/Azure.png';
-import IconTerraform from '../assets/icons/Terraform.png';
-import IconLangChain from '../assets/icons/Langchain.jpg';
-import IconGitHub from '../assets/icons/Github.png';
+import IconReact from '../assets/Icons/React.png';
+import IconPython from '../assets/Icons/Python.png';
+import IconAWS from '../assets/Icons/AWS.png';
+import IconAzure from '../assets/Icons/Azure.png';
+import IconTerraform from '../assets/Icons/Terraform.png';
+import IconLangChain from '../assets/Icons/Langchain.jpg';
+import IconDocker from '../assets/Icons/Docker.png';
+import IconGitHub from '../assets/Icons/Github.png';
+
 
 
 export default function Home() {
@@ -73,6 +75,7 @@ export default function Home() {
           <img src={IconAzure} alt="Azure" height="40" />
           <img src={IconTerraform} alt="Terraform" height="40" />
           <img src={IconLangChain} alt="LangChain" height="40" />
+          <img src={IconDocker} alt="Docker" height="40" />
           <img src={IconGitHub} alt="GitHub" />
 
         </Stack>
