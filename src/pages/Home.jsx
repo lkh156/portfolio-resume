@@ -75,7 +75,7 @@ export default function Home() {
                 <CardMedia
                   component="img"
                   height="240"
-                  image={`${process.env.PUBLIC_URL}/assets/${featured.image}`}
+                  image={featured.image}
                   alt={featured.title}
                 />
               )}

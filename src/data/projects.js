@@ -1,7 +1,9 @@
+import UnderConstruction from '../assets/UnderConstruction.png';
+
 const projects = [
     {
         title: 'Project One',
-        image: `UnderConstruction.png`,
+        image: require('../assets/UnderConstruction.png'),
         blurb: 'A quick overview of Project One.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -9,7 +11,7 @@ const projects = [
 
     {
         title: 'Project Two',
-        image: `UnderConstruction.png`,
+        image: require('../assets/UnderConstruction.png'),
         blurb: 'A quick overview of Project Two.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -17,7 +19,7 @@ const projects = [
 
     {
         title: 'Project Three',
-        image: `UnderConstruction.png`,
+        image: require('../assets/UnderConstruction.png'),
         blurb: 'A quick overview of Project Three.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -25,7 +27,7 @@ const projects = [
 
     {
         title: 'Project Four',
-        image: `UnderConstruction.png`,
+        image: require('../assets/UnderConstruction.png'),
         blurb: 'A quick overview of Project Four.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -33,7 +35,7 @@ const projects = [
 
     {
         title: 'Project Five',
-        image: `UnderConstruction.png`,
+        image: require('../assets/UnderConstruction.png'),
         blurb: 'A quick overview of Project Five.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',

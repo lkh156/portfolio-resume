@@ -26,7 +26,7 @@ export default function Portfolio() {
               <CardMedia
                 component="img"
                 height="280"
-                image={`${process.env.PUBLIC_URL}/assets/${featured.image}`}
+                image={featured.image}
                 alt={featured.title}
               />
             )}
@@ -57,7 +57,7 @@ export default function Portfolio() {
                 <CardMedia
                   component="img"
                   height="160"
-                  image={`${process.env.PUBLIC_URL}/assets/${project.image}`}
+                  image={project.image}
                   alt={project.title}
                 />
               )}
