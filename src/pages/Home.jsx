@@ -18,7 +18,7 @@ export default function Home() {
     <Container sx={{ py: 10 }}>
       <Box textAlign="center">
         <img
-          src="/assets/profile/linkedin-photo.jpg"
+          src={`${process.env.PUBLIC_URL}/assets/profile/linkedin-photo.jpg`}
           alt="Loran Hendricks"
           style={{ borderRadius: '50%', height: 120, marginBottom: 16 }}
         />
@@ -54,13 +54,14 @@ export default function Home() {
         {/* Tech Stack Icons */}
         <Typography variant="h6" sx={{ mt: 8, mb: 2 }}>Tech Stack</Typography>
         <Stack direction="row" spacing={3} justifyContent="center" flexWrap="wrap">
-          <img src="/assets/icons/react.svg" alt="React" height="40" />
-          <img src="/assets/icons/python.svg" alt="Python" height="40" />
-          <img src="/assets/icons/aws.svg" alt="AWS" height="40" />
-          <img src="/assets/icons/azure.svg" alt="Azure" height="40" />
-          <img src="/assets/icons/terraform.svg" alt="Terraform" height="40" />
-          <img src="/assets/icons/langchain.jpg" alt="LangChain" height="40" />
-          <img src="/assets/icons/github.svg" alt="GitHub" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/react.svg`} alt="React" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/python.svg`} alt="Python" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/aws.svg`} alt="AWS" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/azure.svg`} alt="Azure" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/terraform.svg`} alt="Terraform" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/langchain.jpg`} alt="LangChain" height="40" />
+          <img src={`${process.env.PUBLIC_URL}/assets/icons/github.svg`} alt="GitHub" />
+
         </Stack>
 
         {/* Featured Project */}
@@ -74,7 +75,7 @@ export default function Home() {
                 <CardMedia
                   component="img"
                   height="240"
-                  image={featured.image}
+                  image={`${process.env.PUBLIC_URL}/assets/${featured.image}`}
                   alt={featured.title}
                 />
               )}

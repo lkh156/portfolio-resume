@@ -55,7 +55,7 @@ export default function ProjectCard({ project }) {
             <CardMedia
               component="img"
               height="140"
-              image={image}
+              image={`${process.env.PUBLIC_URL}/assets/${image}`}
               alt={title}
             />
           )}

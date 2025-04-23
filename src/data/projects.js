@@ -1,7 +1,7 @@
 const projects = [
     {
         title: 'Project One',
-        image: '/assets/UnderConstruction.png',
+        image: `UnderConstruction.png`,
         blurb: 'A quick overview of Project One.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -9,7 +9,7 @@ const projects = [
 
     {
         title: 'Project Two',
-        image: 'assets/UnderConstruction.png',
+        image: `UnderConstruction.png`,
         blurb: 'A quick overview of Project Two.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -17,7 +17,7 @@ const projects = [
 
     {
         title: 'Project Three',
-        image: 'assets/UnderConstruction.png',
+        image: `UnderConstruction.png`,
         blurb: 'A quick overview of Project Three.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -25,7 +25,7 @@ const projects = [
 
     {
         title: 'Project Four',
-        image: 'assets/UnderConstruction.png',
+        image: `UnderConstruction.png`,
         blurb: 'A quick overview of Project Four.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
@@ -33,7 +33,7 @@ const projects = [
 
     {
         title: 'Project Five',
-        image: 'assets/UnderConstruction.png',
+        image: `UnderConstruction.png`,
         blurb: 'A quick overview of Project Five.',
         liveLink: 'https://',
         repoLink: 'https://github.com/lkh156/',
