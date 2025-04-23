@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/portfolio-resume/static/js/main.9707fbec.js",
+    "main.js": "/portfolio-resume/static/js/main.9494b192.js",
     "static/media/UnderConstruction.png": "/portfolio-resume/static/media/UnderConstruction.f75ecaaab2586880485a.png",
-    "static/media/linkedin-photo.jpg": "/portfolio-resume/static/media/linkedin-photo.9da1e35488eee37457ec.jpg",
-    "static/media/python.png": "/portfolio-resume/static/media/python.c89d9d344441cafc8592.png",
+    "static/media/LinkedIn-Photo.jpg": "/portfolio-resume/static/media/LinkedIn-Photo.9da1e35488eee37457ec.jpg",
+    "static/media/Python.png": "/portfolio-resume/static/media/Python.c89d9d344441cafc8592.png",
     "static/media/Azure.png": "/portfolio-resume/static/media/Azure.cdb5bff87930a99f8a85.png",
-    "static/media/aws.png": "/portfolio-resume/static/media/aws.ca114fbb934a9bb867fe.png",
+    "static/media/AWS.png": "/portfolio-resume/static/media/AWS.ca114fbb934a9bb867fe.png",
     "static/media/Terraform.png": "/portfolio-resume/static/media/Terraform.6b30c1c0927ca0870c90.png",
     "index.html": "/portfolio-resume/index.html",
-    "main.9707fbec.js.map": "/portfolio-resume/static/js/main.9707fbec.js.map"
+    "main.9494b192.js.map": "/portfolio-resume/static/js/main.9494b192.js.map"
   },
   "entrypoints": [
-    "static/js/main.9707fbec.js"
+    "static/js/main.9494b192.js"
   ]
 }
