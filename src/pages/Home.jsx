@@ -6,6 +6,19 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import projects from '../data/projects';
 
+// Profile photo
+import LinkedInPhoto from '../assets/profile/linkedin-photo.jpg';
+
+// Tech stack icons
+import IconReact from '../assets/icons/react.svg';
+import IconPython from '../assets/icons/python.svg';
+import IconAWS from '../assets/icons/aws.svg';
+import IconAzure from '../assets/icons/azure.svg';
+import IconTerraform from '../assets/icons/terraform.svg';
+import IconLangChain from '../assets/icons/langchain.jpg';
+import IconGitHub from '../assets/icons/github.svg';
+
+
 export default function Home() {
   const [featured, setFeatured] = useState(null);
 
@@ -18,7 +31,7 @@ export default function Home() {
     <Container sx={{ py: 10 }}>
       <Box textAlign="center">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/profile/linkedin-photo.jpg`}
+          src={LinkedInPhoto}
           alt="Loran Hendricks"
           style={{ borderRadius: '50%', height: 120, marginBottom: 16 }}
         />
@@ -54,13 +67,13 @@ export default function Home() {
         {/* Tech Stack Icons */}
         <Typography variant="h6" sx={{ mt: 8, mb: 2 }}>Tech Stack</Typography>
         <Stack direction="row" spacing={3} justifyContent="center" flexWrap="wrap">
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/react.svg`} alt="React" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/python.svg`} alt="Python" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/aws.svg`} alt="AWS" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/azure.svg`} alt="Azure" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/terraform.svg`} alt="Terraform" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/langchain.jpg`} alt="LangChain" height="40" />
-          <img src={`${process.env.PUBLIC_URL}/assets/icons/github.svg`} alt="GitHub" />
+          <img src={IconReact} alt="React" height="40" />
+          <img src={IconPython} alt="Python" height="40" />
+          <img src={IconAWS} alt="AWS" height="40" />
+          <img src={IconAzure} alt="Azure" height="40" />
+          <img src={IconTerraform} alt="Terraform" height="40" />
+          <img src={IconLangChain} alt="LangChain" height="40" />
+          <img src={IconGitHub} alt="GitHub" />
 
         </Stack>
 
