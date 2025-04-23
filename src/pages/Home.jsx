@@ -7,15 +7,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import projects from '../data/projects';
 
 // Profile photo
-import LinkedInPhoto from '../assets/profile/linkedin-photo.jpg';
+import LinkedInPhoto from '../assets/profile/LinkedIn-Photo.jpg';
 
 // Tech stack icons
-import IconReact from '../assets/icons/react.png';
-import IconPython from '../assets/icons/python.png';
-import IconAWS from '../assets/icons/aws.png';
+import IconReact from '../assets/icons/React.png';
+import IconPython from '../assets/icons/Python.png';
+import IconAWS from '../assets/icons/AWS.png';
 import IconAzure from '../assets/icons/Azure.png';
 import IconTerraform from '../assets/icons/Terraform.png';
-import IconLangChain from '../assets/icons/langchain.jpg';
+import IconLangChain from '../assets/icons/Langchain.jpg';
 import IconGitHub from '../assets/icons/Github.png';
 
 
