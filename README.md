@@ -17,7 +17,7 @@ Deployed via **GitHub Pages**: [View Live Site](https://lkh156.github.io/portfol
 
 ## 📁 Project Structure
 
-
+```Bash
 portfolio-resume/
 ├── public/
 │ ├── 404.html # Fallback for GitHub Pages routing
@@ -37,7 +37,7 @@ portfolio-resume/
 ├── package.json
 ├── README.md
 └── deploy (via npm run deploy)
-
+```
 ---
 
 
