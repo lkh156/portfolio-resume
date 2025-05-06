@@ -17,7 +17,7 @@ Deployed via **GitHub Pages**: [View Live Site](https://lkh156.github.io/portfol
 
 ## 📁 Project Structure
 
-```bash
+
 portfolio-resume/
 ├── public/
 │ ├── 404.html # Fallback for GitHub Pages routing
@@ -38,6 +38,8 @@ portfolio-resume/
 ├── README.md
 └── deploy (via npm run deploy)
 
+---
+
 
 ## 🚀 Features
 
@@ -47,11 +49,14 @@ portfolio-resume/
 - 🖼️ Images imported directly from the local `/src/assets` folder (no broken image paths!)
 - 📄 Resume page with structured professional history
 
-🧪 Notes
+---
+
+##🧪 Notes
 The site is deployed using the gh-pages branch via the gh-pages npm package.
 
 All images are imported using ES module imports to avoid public path issues on GitHub Pages.
 
+---
 
-🪪 License
+##🪪 License
 MIT – Use freely with attribution.
