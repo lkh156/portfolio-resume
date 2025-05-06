@@ -51,12 +51,13 @@ portfolio-resume/
 
 ---
 
-##🧪 **Notes**
+🧪 Notes
 - The site is deployed using the gh-pages branch via the gh-pages npm package.
 
 - All images are imported using ES module imports to avoid public path issues on GitHub Pages.
 
 ---
 
-##🪪 **License**
+🪪 License
+
 MIT – Use freely with attribution.
