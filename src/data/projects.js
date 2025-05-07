@@ -1,4 +1,5 @@
 import UnderConstruction from '../assets/UnderConstruction.png';
+import UnderConstruction from '../assets/ai-legal-research-agent.png';
 
 const projects = [
     {
