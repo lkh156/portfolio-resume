@@ -1,10 +1,18 @@
 // src/pages/Home.jsx
 import React, { useEffect, useState } from 'react';
-import { Container, Typography, Box, Button, Stack, Card, CardContent, CardActions, CardMedia, IconButton } from '@mui/material';
+import {
+  Container,
+  Typography,
+  Box,
+  Button,
+  Stack,
+  IconButton
+} from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import projects from '../data/projects';
+import ProjectCard from '../components/ProjectCard'; // Use the flipping card
 
 // Profile photo
 import LinkedInPhoto from '../assets/Profile/LinkedIn-Photo.jpg';
@@ -18,8 +26,6 @@ import IconTerraform from '../assets/Icons/Terraform.png';
 import IconLangChain from '../assets/Icons/Langchain.jpg';
 import IconDocker from '../assets/Icons/Docker.png';
 import IconGitHub from '../assets/Icons/Github.png';
-
-
 
 export default function Home() {
   const [featured, setFeatured] = useState(null);
@@ -76,8 +82,7 @@ export default function Home() {
           <img src={IconTerraform} alt="Terraform" height="40" />
           <img src={IconLangChain} alt="LangChain" height="40" />
           <img src={IconDocker} alt="Docker" height="40" />
-          <img src={IconGitHub} alt="GitHub" />
-
+          <img src={IconGitHub} alt="GitHub" height="40" />
         </Stack>
 
         {/* Featured Project */}
@@ -86,32 +91,13 @@ export default function Home() {
             <Typography variant="h4" gutterBottom>
               Featured Project
             </Typography>
-            <Card sx={{ maxWidth: 600, mx: 'auto' }}>
-              {featured.image && (
-                <CardMedia
-                  component="img"
-                  height="240"
-                  image={featured.image}
-                  alt={featured.title}
-                />
-              )}
-              <CardContent>
-                <Typography variant="h5" gutterBottom>{featured.title}</Typography>
-                <Typography variant="body2" color="text.secondary">{featured.description}</Typography>
-              </CardContent>
-              <CardActions>
-                {featured.liveLink && (
-                  <Button size="small" href={featured.liveLink} target="_blank">Live</Button>
-                )}
-                {featured.repoLink && (
-                  <Button size="small" href={featured.repoLink} target="_blank">Repo</Button>
-                )}
-              </CardActions>
-            </Card>
+            <Box sx={{ maxWidth: 400, mx: 'auto' }}>
+              <ProjectCard project={featured} />
+            </Box>
           </Box>
         )}
 
-        {/* About Me Section */}
+        {/* About Me */}
         <Box mt={10} maxWidth={800} mx="auto" textAlign="left">
           <Typography variant="h4" gutterBottom textAlign="center">
             About Me

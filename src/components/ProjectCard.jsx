@@ -8,75 +8,112 @@ import {
   CardActions,
   Button,
   Typography,
+  Grid,
+  Box
 } from '@mui/material';
 
-// 1) Give us a 3D context
+// Resize as needed
+const CARD_WIDTH = 480;
+const CARD_HEIGHT = 700;
+
 const CardContainer = styled('div')`
   perspective: 1000px;
   cursor: pointer;
-  display: inline-block; /* shrink‑wrap to card width */
+  width: ${CARD_WIDTH}px;
+  height: ${CARD_HEIGHT}px;
+  margin: auto;
 `;
 
-// 2) This wrapper *flips*
 const CardInner = styled('div')(({ flipped }) => ({
   position: 'relative',
   width: '100%',
+  height: '100%',
   transformStyle: 'preserve-3d',
   transition: 'transform 0.6s',
   transform: flipped ? 'rotateY(180deg)' : 'none',
 }));
 
-// 3) Front face—in flow, so it gives the wrapper its height
-const CardFront = styled(Card)`
-  backface-visibility: hidden;
-`;
-
-// 4) Back face—covers the front when flipped
-const CardBack = styled(Card)`
+const FaceCard = styled(Card)`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+`;
+
+const CardFront = styled(FaceCard)``;
+
+const CardBack = styled(FaceCard)`
   transform: rotateY(180deg);
 `;
 
 export default function ProjectCard({ project }) {
   const [flipped, setFlipped] = useState(false);
-  const { title, image, blurb, liveLink, repoLink } = project;
+  const { title, blurb, screenshots, liveLink, repoLink } = project;
 
   return (
-    <CardContainer onClick={() => setFlipped((f) => !f)}>
+    <CardContainer onClick={() => setFlipped((prev) => !prev)}>
       <CardInner flipped={flipped}>
         {/* FRONT */}
         <CardFront>
-          {image && (
-            <CardMedia
-              component="img"
-              height="140"
-              image={`${process.env.PUBLIC_URL}/assets/${image}`}
-              alt={title}
-            />
-          )}
-          <CardContent>
-            <Typography variant="h5">{title}</Typography>
+          <CardContent sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" gutterBottom>{title}</Typography>
+            <Typography variant="body2" color="text.secondary">{blurb}</Typography>
           </CardContent>
+          <CardActions sx={{ justifyContent: 'center', mb: 1 }}>
+            <Typography variant="caption">Click to view screenshots</Typography>
+          </CardActions>
         </CardFront>
 
         {/* BACK */}
         <CardBack>
-          <CardContent>
-            <Typography variant="body2">{blurb}</Typography>
+          <CardContent sx={{ flexGrow: 1 }}>
+            {/* Always show title */}
+            <Typography variant="h6" gutterBottom textAlign="center">
+              {title}
+            </Typography>
+
+            {/* Grid of first 4 images */}
+            <Grid container spacing={1}>
+              {screenshots?.slice(0, 4).map((src, idx) => (
+                <Grid item xs={6} key={idx}>
+                  <CardMedia
+                    component="img"
+                    height="110"
+                    image={src}
+                    alt={`Screenshot ${idx + 1}`}
+                    loading="lazy"
+                    style={{ objectFit: 'cover', borderRadius: 4 }}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+
+            {/* Final large image (screenshot 5) */}
+            {screenshots?.[4] && (
+              <Box mt={2}>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={screenshots[4]}
+                  alt="Screenshot 5"
+                  loading="lazy"
+                  style={{ objectFit: 'cover', width: '100%', borderRadius: 4 }}
+                />
+              </Box>
+            )}
           </CardContent>
-          <CardActions>
+
+          <CardActions sx={{ justifyContent: 'space-around', pb: 2 }}>
             {liveLink && (
-              <Button size="small" href={liveLink} target="_blank">
+              <Button size="small" href={liveLink} target="_blank" rel="noopener noreferrer">
                 Live
               </Button>
             )}
             {repoLink && (
-              <Button size="small" href={repoLink} target="_blank">
+              <Button size="small" href={repoLink} target="_blank" rel="noopener noreferrer">
                 Code
               </Button>
             )}
@@ -90,8 +127,8 @@ export default function ProjectCard({ project }) {
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    image: PropTypes.string,
     blurb: PropTypes.string,
+    screenshots: PropTypes.arrayOf(PropTypes.string),
     liveLink: PropTypes.string,
     repoLink: PropTypes.string,
   }).isRequired,
