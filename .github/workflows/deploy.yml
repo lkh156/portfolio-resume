@@ -1,27 +1,32 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches:
-      - main
+  push:  # trigger on every push to any branch
+    paths-ignore:
+      - '**.md'       # optional: ignore changes to markdown files like README
+      - '**/LICENSE'  # optional: ignore license changes
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout source code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
