@@ -100,11 +100,11 @@ export default function Home() {
                 <Typography variant="body2" color="text.secondary">{featured.description}</Typography>
               </CardContent>
               <CardActions>
-                {featured.live && (
-                  <Button size="small" href={featured.live} target="_blank">Live</Button>
+                {featured.liveLink && (
+                  <Button size="small" href={featured.liveLink} target="_blank">Live</Button>
                 )}
-                {featured.repo && (
-                  <Button size="small" href={featured.repo} target="_blank">Repo</Button>
+                {featured.repoLink && (
+                  <Button size="small" href={featured.repoLink} target="_blank">Repo</Button>
                 )}
               </CardActions>
             </Card>
